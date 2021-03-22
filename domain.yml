@@ -24,9 +24,13 @@ intents:
 
 responses:
   utter_hello:
-  - text: "Hey there! How are you?"
+  - text: "Hey there! How are you?
   - text: "Hi! Nice to see you around again."
   - text: "Heya! How was your day?"
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -57,6 +61,11 @@ responses:
     - text: "Why do astronauts use Linux? Because one can't open Windows in space."
     - text: "I am starting a political party. I support Vector Machines!"
 
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
 
 session_config:
   session_expiration_time: 60

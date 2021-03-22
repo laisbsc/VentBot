@@ -45,3 +45,4 @@ stories:
     - action: utter_iamabot
     - intent: joke
     - action: utter_joke
+    - action: utter_goodbye
