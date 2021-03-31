@@ -4,4 +4,4 @@ Capstone project. A friendly chatbot that helps humans get throught the emotiona
 ## To install the repository localy
 - git clone the repo
 - cd into the repository
-- - install the dependencies by typing `pip install -r requirements.txt`.
+- - install the dependencies by typing `python -m pip install -r requirements.txt`.
