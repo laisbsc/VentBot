@@ -32,6 +32,8 @@ Here, the folder `data` files such as:
 ├── rules.yml   # 
 └── stories.yml # file containing the conversation intents followed by the system's actions
 ```
+@todo: Define chatbot terms in the docs.
+@Body: The terms `entity`, `intent`, and `action`, `NLU` should be defined in the context of a chatbot, specifying its usage in detail. Glossary?
 
 Moreover, the configuration files for the chatbot will be held at YAML files. Such as:
 ```bash
