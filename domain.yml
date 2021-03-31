@@ -32,7 +32,7 @@ responses:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
+  utter_did_that_help: # maybe call `feedback` or `response_evaluation`
   - text: "Did that help you?"
 
   utter_happy:
