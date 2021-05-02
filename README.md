@@ -10,8 +10,8 @@ Capstone project. A friendly chatbot that helps humans get through the emotional
 - activate your virtual environment
 - install the project dependencies with `pip install -r requirements.txt`.
 You have now a working environment!
-  
-> Want to chat with Ada right now? Type `rasa shell` and start conversing.
+
+> Want to chat with Ada right now? Type `rasa shell` on your terminal (from an activated virtual environment) and start conversing.
 
 ## Open a PR
 Once your repository has successfully locally setup, you can start contributing to the main repo
