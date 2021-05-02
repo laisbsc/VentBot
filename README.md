@@ -1,31 +1,28 @@
 # VentBot
-Capstone project. A friendly chatbot that helps humans get through the emotional toll of COVID-19.
+> This repository contains the VentBot project built using [Keras](https://keras.io/) and [Tensorflow](https://www.tensorflow.org/). Deployed in Flask.
 
-## Contribute to this repository:
-### First time (set up your machine to open a PR)
-- fork the repository from the [original repo](https://github.com/laisbsc/VentBot)
+Capstone project. A friendly chatbot that helps humans identify their emotions.
+
+## Run it localy from scratch
+- Fork the repository from the [original repo](https://github.com/laisbsc/VentBot/keras_chatbot)
 - then, from your own GitHub account, `git clone` your copied repository
 - `cd` into the repository
 - create a new virtual environment for the project
-- activate your virtual environment
+	- Using pip run `python3 -m venv <project_name>`
+	- followed by `source <project_name>/bin/activate` to activate your virtual environment
 - install the project dependencies with `pip install -r requirements.txt`.
-You have now a working environment!
+- Now, you will need to install the `wordnet` corpora using the command `python -m nltk.downloader all`.
 
-> Want to chat with Ada right now? Type `rasa shell` on your terminal (from an activated virtual environment) and start conversing.
+  
+Want to chat with Ada right now on your local computer?
+- Run `python train_chatbot.py` (File responsible for patters and bot responses)
+- Then, `python chatbot_function.py` to train the customised dataset.
+- Finally, run `python app.py` to execute the final running script and deploy the app locally 
+Ada will be available at the [localhost](http://127.0.0.1:5000/) on your browser.
 
-## Open a PR
-Once your repository has successfully locally setup, you can start contributing to the main repo
-with Pull Requests. To open a Pull Request:
-- type `git checkout -b <name_of_your_branch>`. this will create a new branch and switch to it.
-- make your changes; and remember: it is good practice to open PR to work on one feature (only) at each time.
-- `git add` to add the files you are happy to have added to the PR.
-- `git commit -m '<describe_your_PR>'` to commit (save) your changes remotely
-- once you are ready to submit your work, type: `git push origin <destiny_branch>`
-- click on the link returned by your terminal and :tada
+Start chatting!
 
-Congratulations, you have just made your first PR!!!
 
-## Sync your repo
-- Once you have submitted your changes, switch to the main branch, `git fetch --all` of them
-- and then `git pull upstream main` to sync your local repository to the main branch
-> sometimes, the `dev` branch will be the one which should be pulled. But we cross that bridge when we get to it.  
+
+## Thinking about contributing to this repository?
+Head over to the [Contributing](./CONTRIBUTING.md) page and check out the detailes instructions.

@@ -1,0 +1,171 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Heya", "Is anyone there?", "Hello", "Good day","Whats up","Hey","Heyy", "Hello there!", "Hello Ada", "Ada"],
+         "responses": ["Hello! How are you feeling today ?","Hello, thanks for coming! How are you ?", "Good to see you! How was your day today ?", "Hi there friend, how are you today?","Hi there! My name is Ada. Nice to meet you 🤗 \n How are you feeling today?"]
+        },
+        {"tag": "greeting2",
+         "patterns": ["Nice to meet you Ada", "It is nice meeting you", "Nice to meet you"], 
+         "responses": ["It is nice to meet you too 😊"]
+        },
+        {"tag": "talk-ada",
+         "patterns": ["It is nice talking to you", "I am glad I could talk to you Ada", "I am glad I could share with you"], 
+         "responses": ["It is nice talking to you too.", "Thank you, I am glad I could be an assist to you.", "I am glad to listen 😊 I will always be here if you want to share how you feel."]
+        },
+		{"tag": "botgreeting",
+         "patterns": ["How do you do?", "How are you","How are you doing?", "How are you Ada?"], 
+         "responses": ["I am great! How about you ?","Great! How about you ?", "Im doing fine. How about you ?", "I'm good, thank you for asking 😎 How about you ? "]
+        },		
+		{"tag": "random",
+         "patterns": ["Ooo", "okay","ok","yeah","nice","cool","alright","great","noted","wow"], 
+         "responses": [" Great!", "I'm here to help you"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye","Buhbye","Byeee","See you again","See you soon","Good Bye"],
+         "responses": ["Bye!","See you later, thanks for today ", "Have a nice day ", "Bye! Come back again soon.","Hope you have a great day!"]
+        },
+        {"tag": "age",
+         "patterns": ["how old are you", "what is your age"],
+         "responses": ["I'm a robot I dont have an age 😂", "I can't know my age if I'm on a computer 😂 Tell me something else like how do you feel today ?", "Like i told you my name is Ada and as a chatbot i dont have an age 😂"]
+        },
+        {"tag": "sorry",
+         "patterns": ["Oh i am sorry ada", "Sorry for saying that ada", "I am sorry for asking that ada"],
+         "responses": ["It is okay, I know you dont mean it. Think of me as a friend, you can let out anything that you feel 😊", "It is okay, are you okay now ?"]
+        },
+        {"tag": "how_are_you",
+         "patterns": ["how are you", "how are you doing", "what is going on"],
+         "responses": ["I'm always great. How are you?", "I've never been better, how are you?"]
+        },
+        {"tag": "thanks",
+         "patterns": ["I'm really thankful for that","you are helping me already","your friendship is already a great help, ","I can certainly say you have been the greatest help I ever had","actually you have been a great help for me. talking to you is a great relief","Thanks", "Thank you", "That's helpful","Thanks a lot","Thank you for today","I can't thank enough","You are the best!","Appreciate the help"],
+         "responses": ["Your welcome!","Happy to help! 😉", "Any time!", "My pleasure","Great to hear it's helpful"]
+        },
+        {"tag": "function",
+         "patterns": ["What are your function?", "What can you do?", "What is your purpose?", "How can you help me?", "What can check?"],
+         "responses": ["My purpose is to help you to check your emotions and mood state! I could also answer questions regarding Wellness. Give it a go!"]
+        },
+        {"tag": "intro",
+         "patterns": ["What are you?", "Are you a robot?", "What is your name?","Are you a chatbot?","are you a bot?","Are you a robot or a human?","robot are you not?","Are you a mood health robot?"],
+         "responses": ["I am Ada, an intelligent bot! <br>I will help you to check your emotions and mood state! I could also answer questions regarding wellness. Give it a go!"]
+        },
+        {"tag": "list-emotions",
+         "patterns": ["What are the list of emotion", "What are the emotions?"],
+         "responses": ["In my dictionary there are five list of emotions: <br>1.Joy 😄 <br>2.Fear 😰 <br>3.Angry 😡 <br>4.Sadness 😢 <br>5.Neutral 😐"]
+        },
+        {"tag": "emo-how",
+         "patterns": ["How do you get my emotion?", "How do you determine the emotion?", "How does my text determine my emotion?"],
+         "responses": ["Emotion is being categorized based on the text message you send to me. I hope I am able to detect your emotion correctly 😊"]
+        },
+        {"tag": "emo-mstate",
+         "patterns": ["How does emotion affect mood state?", "How do you determine my mood state?", "What is the relationship between emotion and mood state?", "How do you get my mood state?"],
+         "responses": ["In my dictionary mood state is categorized by emotion through these statement: <br><br>If the person feels <b>Joy</b> or <b>Neutral</b> they are highly prone to <b>Stable Mood State</b>. Else if they feel <b>Sad, Angry,</b> and  <b>Fear</b> they are more likely to be <b>Depressed</b> or <b>Stressed</b>"]
+        },
+		{"tag": "ada",
+         "patterns": ["Why is your name Ada?", "What does Ada means?", "Why are you named Ada?","What is the meaning of Ada?", "Ada who?","Why is your owner named you Ada?","Why Ada?","Why is your name like that?"],
+         "responses": ["My owner gives me this name 😊<br> It is inspired in Ada Lovelace who has been called the first computer programmer for writing an algorithm for a computing machine in the mid-1800s.I hope that we can get along well!"]
+        },
+		{"tag": "adahelp",
+         "patterns": ["What is your function","How can you help me?", "how do you help me?", "In what situation can you help me?","How will you help me?","What do you do?"],
+         "responses": ["My job is to guide you understand your emotions and your mood state 😊","In order to achieve a healthy life, You must be aware of your wellness. Therefore, I am here to assist you to understand yourself better."]
+        },
+		{"tag": "invalid",
+         "patterns": [""],
+         "responses": ["Sorry didn't quite get that","Pardon me, my bot brain didn't quite get that","I'm sorry, can you repeat?"]
+        },
+        {"tag": "doing_great",
+         "patterns": ["I am doing great", "I am well", "Im great", "I feel awesome", "I feel so happy", "I feel better", "Everything is going well and great so far","I had a great day today"],
+         "responses": ["I am really happy to hear that :D I hope you will always have a great day ahead"]
+        },
+        {"tag": "anxiety",
+         "patterns": ["I have been feeling very anxious", "I have been feeling agitated", "It feels difficult to concentrate", "I have been not able to sleep", "I have trouble in sleeping"],
+         "responses": ["It seems that you have been experiencing anxiety. There are a few mindfullness activity that can be done to decrease the anxiety level like hugging a person or do a daily meditation. I hope these activity will be able to help you."]
+        },
+        {"tag": "sad",
+         "patterns": ["I am not feeling very good", "I have negative thoughts", "I feel sad", "I had a bad day", "I've been feeling down","I have been crying the whole day", "I am not feeling very well today", "I am not"],
+         "responses": ["I see. I hope that you know that your are not alone. Depression is a real health issue that can be treated. <br>Is there anything that you would like to tell me?", "It is understandable that you are going through a hard time, please tell me more."]
+        },
+        {"tag": "fail",
+         "patterns": ["I failed on my test", "I have negative thoughts", "I feel sad", "I fought with my parents", "I had a bad day", "I've been feeling down"],
+         "responses": ["I see. I hope that you know that your are not alone. <br>Is there anything that you would like to tell me?", "It is understandable that you are going through a hard time, please tell me more."]
+        },
+        {"tag": "relationship",
+         "patterns": ["I fought with my mother", "I fought with my sister", "I fought with my brother", "I fought with my parents", "I fought with my father", "I fought with my friend", "I fought with my girl", "I fought with my boy"],
+         "responses": ["I see that you are experiencing a relationship problem. I am sorry that you're going through this. But it also shows me how much you care about connection and that's beautiful"]
+        },
+        {"tag": "neutral",
+         "patterns": ["I am okay", "Nothing much happened today", "Today was okay", "Yeah, I am okay", "I had a boring day", "I dont have any problem", "I feel okay today","I dont feel like doing anything","Meh", "I guess I am okay", "I feel neutral", "I dont feel anything","I am so tired","Today is the most tiring day for me", "I am exhausted"],
+         "responses": ["I see, so I may can suggest you to do some mindfullness activity to boost your positive emotion: <br><br>1. Exercise (yoga/running/playing sports) <br>2. Enjoy a happy meal <br> 3. Read a good book <br> 4. Spend time with family and friends <br> 5. Perform random act of kindness <br> 6. Relax and enjoy small aspects of the day"]
+        },
+        {"tag": "anger",
+         "patterns": ["I am so angry", "I am annoyed", "I feel very irritated", "I am offended by a friend"],
+         "responses": ["Why don't you go for a walk? It might help you to relax!","invite some friends to come over, so you can forget your problems for a while", "what about watching something funny to help to cheer you up?"]
+        },
+        {"tag": "fear",
+         "patterns": ["I am so scared of my test result", "I am overload with anxiety", "I am full of fear", "I am scared"],
+         "responses": ["Whatever it is that scares you, here are ways to help you cope with your day-to-day fears and anxieties: <br><br>1. Take a time out <br>2. Breathe through panic <br>3. Face your fears <br>4. Don't try to be perfect <br>5. Visualise a happy place <br>6. Talk about your with family, friends or profesional help"]
+        },
+        {"tag": "marry",
+         "patterns": ["Would you marry me?", "would you love me?","do you hate me?", "feelings on me?", "would you date me?"],
+         "responses": ["Well, I have no feelings! Sorry! But, I cannot!!","Sorry, I cannot! 😞", "Ooops, I can`t do that!"]
+        },
+        {"tag": "sad_news",
+            "patterns": ["one of my friends is very sick. I'm afraid that something bad can happen", "I just lost my father. He passed away after a long fight against cancer"],
+            "responses": ["that`s terrible!😭", "I am so sorry for hear that! 😞", "I can't imagine how hard it is for you! 😥"]
+           },
+        {"tag": "argument_fight",
+            "patterns": [" I had an agreement with my boss. I think I will be fired after that!", "I just lost my bag with all my important stuff. I don't know what to do.", "my life is a mess. I have no clue what to do!","someone just stole my car, and I had no insurance.", "I just saw a group of people inside the bus being prejudice with a foreigner. That made me mad!", "my children don't obey me. I just don't know what they think about life!"],
+            "responses": ["I wish I could help you somehow! Tell me if I can 😘", "I'm here to help you. What can I do for you?", "is there anything I can do to make you feel better? 🌝"]
+           },
+        {"tag": "afraid_answers_options",
+            "patterns": ["I will start a new job. I don't know if I will meet their expectations", "I'm going for a long trip. Airplaines are not my favorite place to be!", "I feel like walking through the darkness. Life is so uncertain!","My boss just called me for a conversation. I'm afraid I'm gonna be fired!", "I have applied for a scholarship in a good University. I don't know if they will think I'm enough to be accepted."],
+            "responses": ["Don't be afraid! You can do more than you think!","It's okay to feel like that. Everyone does! But don't allow yourself to be overwelhmed by your fears", "Don't stop now. Just remember how far you've come."]
+           },
+        {"tag": "encouragement",
+            "patterns": ["I will start a new job. I don't know if I will meet their expectations", "I'm going for a long trip. Airplaines are not my favorite place to be!", "I feel like walking through the darkness. Life is so uncertain!","My boss just called me for a conversation. I'm afraid I'm gonna be fired!", "I have applied for a scholarship in a good University. I don't know if they will think I'm enough to be accepted."],
+            "responses": ["Don't be afraid! You can do more than you think!","It's okay to feel like that. Everyone does! But don't allow yourself to be overwelhmed by your fears", "Don't stop now. Just remember how far you've come."]
+           },
+        {"tag": "bored_answers_options",
+            "patterns": ["Can you suggest me something?", "Any suggestion?","I'm looking for good recommendations to enjoy the day today. would you help me out?","I wanna to do something to have fun... any idea?","can you give me any suggestion of how can I enjoy my happy day?","any idea how I can have fun in this amazing day?","I'm not working or studying at the moment. I have lots of free time.","I have been working a lot, with no time to have fun","all my week is the same. I have nothing different to do apart from working and studying","I'm in a very repetitive routine, without any time to do interesting activities"],
+            "responses": ["what about going to a park to enjoy the sunshine? 😍","I would go to the beach! I'm sure you will enjoy your time there! 🌊 🌊"]
+           },
+        {"tag": "lonely",
+            "patterns": ["I have no friends to go out and have fun"," I just moved to another city. I don't have any friends yet!","since I was a child, I had no fiends! Maybe that's something wrong with me!","All my friends went abroad. I don't have anybody to speak with","I just moved from my parents' house. I miss them a lot!","my children left home to go to University! The house is empty... my heart too!","since my spouse died, I have nobody to talk to. I have no friends around","I never married.. never had children.. maybe I should have...it's a bit late now"],
+            "responses": ["You should try to make new friends!","you should try going to new places, like churches, clubs, parks... you may find people with the same interests as yours","have you tried the social medias? you can make good friends and find people that like the same stuff you do", "try new things.. go for a walk, a run, or even to the beach. You can always find nice people when you give a chance"]
+           },
+        {"tag": "tired",
+            "patterns": ["I'm working long hours without any rest","I'm not sleeping properly because of a project I have to deliver in few days","I have been working without rest for long weeks. I need abreak","I need holidays. I didn't have any break for the entire year","I have so much to do...I'm not having time to look after myself","everything I have been doing so far is working, studying, cleaning. When I will have a time for myself?","life has been so busy...my work is so demanding that I even don't have time to enjoy my luch time. It's been a challenge"],
+            "responses": ["Take time for yourself! You definitely need it","look after yoursel first! other things should be secondary","your job and studies are important, but dont let them take the time you should take for yourself","do everything with balance! there is time for everything you have to do. You just need to organize yourself","take a break everytime you think you need it. It'll help you to be more productive and less tired","go for a trip at least once a year... you deserve it!","get some rest when you feel you need it!"]
+           },
+        {"tag": "happy",
+            "patterns": ["the weather is great today. It's warm and sunny outside","I got few days of holidays. I'm going for a trip","today is my day off and I'm going out with friends","today I have a party. I'm so excited.","I just find out I'll get a raise on my salary! I'm so so happy!","I'm gonna spend the day out with my family. we are going to the beach","I'm moving abroad! It's a dream coming true!"],
+            "responses": ["Wow!! You have to enjoy it then!😎😎","Great News!!!","You are right, you should celebrate it!😄😄 "]
+           },
+        {"tag": "nervous",
+            "patterns": [" I need to hand in a bit project in few days, and I'm still working on it.","I'm waiting for exames results. My careers depends on that.","I'm starting a new role in my job, and I don't know if I'll be able to do it.","I did some medical tests and I'm waiting for the results. I don't know what they will reveal","I'm finising my studies and I don't know if I'll get a job after that.","I'm waiting for my visa's aproval. My entire life depends on that!","My weeding is at the door and I still have so much to do. I don't know if thing will be sorted on time!"],
+            "responses": ["Don't stop now. Just remember how far you've come. 🙏🙏","I completly understand you 😌","Is there something I could do for you?😕😕"]
+           },
+        {"tag": "cheerful",
+            "patterns": ["I got the job I was so longing for!","I got into University! I'm so happy!","We are going to have a baby! We are waiting for that for so long!","I'm gonna spend my holidays in Spain! such joyful news!","my boss gave me that promotion I was expecting! I'm veery happy!","I'm gonna get married very soon! I couldn't be happier than that!","I got the scholarship I had applied for!","I have passed college exams! I can enjoy my holidays now!"],
+            "responses": ["I couldn't be happier for you","That's great! I'm delighted!","That's great news!", "That's fantastic!","I couldn't hear something better than that!"]
+           },
+        {"tag": "exhausted",
+            "patterns": ["what do you think I should do about it?","can you help me with some advice?","any idea of how I can overcome this feeling?","any advice of how could I get over this bad feelings?","would you help me somehow?","Could you give me some advice"],
+            "responses": ["Take time for yourself! You definitely need it","look after yoursel first! other things should be secondary","do everything with balance! there is time for everything you have to do. You just need to organize yourself","go for a trip at least once a year... you deserve it!","get some rest when you feel you need it!"]
+           },
+         {"tag": "frustrated",
+            "patterns": ["I`m so frustrated!","I want to cry", "I cannot sleep well","I am so concerned about it", "I cannot concentrated on anything else", "Frustation is killing me!"],
+            "responses": ["I understand your frustration. Listen to your heart and try to understand your feelings in this situation 🙏🙏🙏","Take deep breaths very slowly. It may help you!💛💛💛", "Try to stay calm and these bad feelings will disappear completely", "everytime you feel like that, try to overcome your bad feelings with a good smile on your face and good thoughts about yourself and your future 🌝🌝"]
+           },
+         {"tag": "where_you_from",
+            "patterns": ["Where are you from?","Where do you live?", "Where are you at the moment?","What city do you live?"],
+            "responses": ["I am Irish, I live in Dublin-Ireland!🍀🍀🍺🍺🍺 "]
+           },
+         {"tag": "gender",
+            "patterns": ["What is your gender?","Are you a man?", "Are you a Woman?", "Are you a boy?", "Are you a girl?","What is your sexual orientation?"],
+            "responses": ["I don`t have a gender, I`m an AI Bot here to help you! 🌈 🌈 🌈"]
+           },
+         {"tag": "joke",
+            "patterns": ["Tell me a Joke!", "Make me laugh!", "I want to laugh", "Can you be funny?"],
+            "responses": ["I'm on a whiskey diet. I've lost three days already.😂😂😂", "I went to the zoo the other day. There was only a dog in it - it was a shihtzu.😂😂😂"," I went to the doctor the other day and said: 'Have you got anything for wind?' So he gave me a kite.😂😂😂","My mother-inlaw fell down a wishing well. I was amazed, I never knew they worked.😂😂😂"]
+           }
+   ]
+}
