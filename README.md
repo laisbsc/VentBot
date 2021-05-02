@@ -26,5 +26,3 @@ Start chatting!
 
 ## Thinking about contributing to this repository?
 Head over to the [Contributing](./CONTRIBUTING.md) page and check out the detailes instructions.
-
-

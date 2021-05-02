@@ -1,0 +1,62 @@
+version: "2.0"
+
+intents:
+  - smalltalk_hello
+  - smalltalk_goodbye
+  - smalltalk_joke
+  - thank
+  - affirm
+  - deny
+  - mood_happy
+  - mood_unhappy
+  - mood_angry
+  - mood_scared
+  - mood_nervous
+  - mood_bored
+  - mood_excited
+  - mood_lonely
+  - mood_tired
+#  - cant_help        # user feeling like bot cannot help > should trigger different action
+#  - report_to_human  # when user says they prefer talking to a human instead
+#  - weather_talk     # convo about the weather - be more Irish, bot!
+#  - react_negative   # recognizes when human is not reacting well to chatbot replies
+  - bot_challenge
+
+responses:
+  utter_hello:
+  - text: "Hey there! How are you?"
+  - text: "Hi! Nice to see you around again."
+  - text: "Heya! How was your day?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help: # maybe call `feedback` or `response_evaluation`
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, tell me more!"
+  - text: "That is fantastic! I'd love to hear more about it."
+  - text: "That is fantastic! I'd love to hear more about it."
+  - text: "That sounds like great news."
+  - text: "You sound excited and it makes me happy!"
+
+  utter_goodbye:
+  - text: "Bye! Hope to see you soon!"
+  - text: "Good bye!"
+  - text: "I will be looking forward to chat again soon! Bye now!"
+  - text: "Take care, [Lais](username)"
+
+  utter_iamabot:
+  - text: "I am a bot!"
+  - text: "I am a friendly chat bot!"
+  - text: "I am a chatty robot, powered by AI!"
+
+  utter_joke:
+    - text: "Why do astronauts use Linux? Because one can't open Windows in space."
+    - text: "I am starting a political party. I support Vector Machines!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
