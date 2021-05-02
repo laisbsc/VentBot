@@ -4,7 +4,11 @@ rules:
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
+<<<<<<< HEAD
   - intent: goodbye
+=======
+  - intent: smalltalk_goodbye
+>>>>>>> f85781763f7f808f385d71f040b0553465102ef6
   - action: utter_goodbye
 
 - rule: Say 'I am a bot' anytime the user challenges

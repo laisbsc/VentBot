@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ada</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fa fa-medkit"></i> Ada - Ventbot <i class="fa fa-medkit"></i>
+      </div>
+    </header>
+    <main class="msger-chat">
+      <div class="msg left-msg">
+        <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"></div>
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">Ada</div>
+            <div class="msg-info-time"></div>
+          </div>
+          <div class="msg-text"> Hi, my name is Ada. My job is to assist and identifying your emotions and mood, how are you feeling today? 😄 </div>
+        </div>
+      </div>
+    </main>
+    <form class="msger-inputarea">
+      <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+  <!-- partial -->
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+  <script>
+    var thumbs_up_count=0
+    var thumbs_down_count=0
+    const msgerForm = get(".msger-inputarea");
+    const msgerInput = get(".msger-input");
+    const msgerChat = get(".msger-chat");
+    // Icons made by Freepik from www.flaticon.com
+    const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
+    const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
+    const BOT_NAME = "Ada";
+    const PERSON_NAME = "You";
+    msgerForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const msgText = msgerInput.value;
+      if (!msgText) return;
+      appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
+      msgerInput.value = "";
+      botResponse(msgText);
+      sentimentResponse(msgText);
+    });
+
+    function appendMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function appendSentMessage(name, img, side, text) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">${text}</div>
+  </div>
+</div>
+`;
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function appendFeedback(name, img, side, tu, td) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">Rate My Answer!</div>
+
+    <div class="rating">
+      <!-- Thumbs up -->
+      <div class="like grow like_button">
+        <i class="fa fa-thumbs-up fa-lg like" aria-hidden="true"></i><i class="tu_count">${tu}</i>
+      </div>
+      <!-- Thumbs down -->
+      <div class="dislike grow dislike_button">
+        <i class="fa fa-thumbs-down fa-lg like" aria-hidden="true"></i><i class="td_count">${td}</i>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+
+      /*
+      $('.like, .dislike').on('click', function() {
+          event.preventDefault();
+         $('.active').removeClass('active');
+         $(this).addClass('active');
+      });*/
+
+      $('.like_button').on('click', function() {
+          event.preventDefault();
+         $('.dislike_button').removeClass('active');
+         $('.like_button').addClass('active');
+         thumbs_up_count += 1
+         $('.tu_count').html(thumbs_up_count)
+         appendFeedbackMessageTU(BOT_NAME, BOT_IMG, "left",thumbs_up_count);
+      });
+
+      $('.dislike_button').on('click', function() {
+          event.preventDefault();
+         $('.like_button').removeClass('active');
+         $('.dislike_button').addClass('active');
+         thumbs_down_count += 1
+         $('.td_count').html(thumbs_down_count)
+         appendFeedbackMessageTD(BOT_NAME, BOT_IMG, "left",thumbs_down_count);
+      });
+    }
+
+    function appendFeedbackMessageTU(name, img, side, tu) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">Great! I am glad my reply is correct! Tell me more about your feeling for me to correctly identify your mood 😊</div>
+  </div>
+</div>
+`;
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function appendFeedbackMessageTD(name, img, side, td) {
+      //   Simple solution for small apps
+      const msgHTML = `
+<div class="msg ${side}-msg">
+  <div class="msg-img" style="background-image: url(${img})"></div>
+
+  <div class="msg-bubble">
+    <div class="msg-info">
+      <div class="msg-info-name">${name}</div>
+      <div class="msg-info-time">${formatDate(new Date())}</div>
+    </div>
+
+    <div class="msg-text">I'm sorry that response wasn't helpful. If you have any feedback towards my performance feel free to fill in the survey!<br><br>Survey link:<br> <a href="https://forms.gle/JL2aJyKHNkQHvdx28" target="_blank">🗒Chatbot Ada Evaluation🗒</a></div>
+  </div>
+</div>
+`;
+      msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+      msgerChat.scrollTop += 500;
+    }
+
+    function botResponse(rawText) {
+      // Bot Response
+      $.get("/get", {
+        msg: rawText
+      }).done(function(data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
+      });
+    }
+
+    function sentimentResponse(rawText) {
+      // Sentiment Response
+      $.get("/getsentiment", {
+        msg: rawText
+      }).done(function(data) {
+        console.log(rawText);
+        console.log(data);
+        const msgText = data;
+        appendSentMessage(BOT_NAME, BOT_IMG, "left", msgText);
+        appendFeedback(BOT_NAME, BOT_IMG, "left",thumbs_up_count,thumbs_down_count);
+      });
+    }
+
+    // Utils
+    function get(selector, root = document) {
+      return root.querySelector(selector);
+    }
+
+    function formatDate(date) {
+      const h = "0" + date.getHours();
+      const m = "0" + date.getMinutes();
+      return `${h.slice(-2)}:${m.slice(-2)}`;
+    }
+  </script>
+</body>
+
+</html>

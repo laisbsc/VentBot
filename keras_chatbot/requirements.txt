@@ -1,0 +1,9 @@
+Flask
+gunicorn
+nltk
+tensorflow
+keras
+Keras-Preprocessing
+keras.utils
+numpy
+pandas
