@@ -1,5 +1,5 @@
 # VentBot
-Capstone project. A friendly chatbot that helps humans get throught the emotional toll of COVID-19.
+Capstone project. A friendly chatbot that helps humans get through the emotional toll of COVID-19.
 
 ## Contribute to this repository:
 ### First time (set up your machine to open a PR)
